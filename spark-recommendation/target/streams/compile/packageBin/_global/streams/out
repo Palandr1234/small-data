@@ -1,0 +1,9 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/vagrant/spark-recommendation/target/scala-2.12/spark-recommendation_2.12-3.2.0_1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MovieLensALS$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/vagrant/spark-recommendation/target/scala-2.12/classes/MovieLensALS$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MovieLensALS.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/vagrant/spark-recommendation/target/scala-2.12/classes/MovieLensALS.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Grader.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/vagrant/spark-recommendation/target/scala-2.12/classes/Grader.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
