@@ -37,26 +37,26 @@ After the learning the system makes a prediction on the test predictors, calcula
 
 - Within this part of the code we check whether there are quotes in the entry. If there are ones then we take everything between the quotes. Otherwise, we split the line on the commas and take the name of the movie.
     
-    ![Untitled](pictures/Untitled.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled.png)
     
 
 - Baseline error: for each movie we find its baseline and calculate RMSE.
     
-    ![Untitled](pictures/Untitled%201.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%201.png)
     
 
 - Exclude from the recommendations the movies that have already been graded by the user.
     
-    ![Untitled](pictures/Untitled%202.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%202.png)
     
 
 - Get rid of the movies that has less than 75 reviews.
     
-    ![Untitled](pictures/Untitled%203.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%203.png)
     
 - Before interrogation we suggest the user to load preferences from a file
     
-    ![Untitled](pictures/Untitled%204.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%204.png)
     
 
 ## Deployment on Private Network Hadoop Cluster
@@ -87,59 +87,59 @@ Here is the process of setting up and running:
     
     `192.168.31.128 datapaf-pc`
     
-    ![Untitled](pictures/Untitled%205.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%205.png)
     
-    ![Screenshot from 2021-11-27 23-18-08.png](pictures/Screenshot_from_2021-11-27_23-18-08.png)
+    ![Screenshot from 2021-11-27 23-18-08.png](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Screenshot_from_2021-11-27_23-18-08.png)
     
 3. One of the hosts wasn't able to ssh to another host, so we generate an ssh public key, installed the ssh-server and copied to another host
     
-    ![Screenshot from 2021-11-27 23-27-48.png](pictures/Screenshot_from_2021-11-27_23-27-48.png)
+    ![Screenshot from 2021-11-27 23-27-48.png](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Screenshot_from_2021-11-27_23-27-48.png)
     
-    ![Screenshot from 2021-11-27 23-27-49.png](pictures/Screenshot_from_2021-11-27_23-27-49.png)
+    ![Screenshot from 2021-11-27 23-27-49.png](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Screenshot_from_2021-11-27_23-27-49.png)
     
-    ![Screenshot from 2021-11-27 23-27-52.png](pictures/Screenshot_from_2021-11-27_23-27-52.png)
+    ![Screenshot from 2021-11-27 23-27-52.png](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Screenshot_from_2021-11-27_23-27-52.png)
     
-    ![Untitled](pictures/Untitled%206.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%206.png)
     
-    ![Untitled](pictures/Untitled%207.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%207.png)
     
 4. On both hosts in `~/.bashrc` file add the following configuration for Spark and Hadoop
     
-    ![Untitled](pictures/Untitled%208.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%208.png)
     
-    ![Screenshot from 2021-11-27 23-32-03.png](pictures/Screenshot_from_2021-11-27_23-32-03.png)
+    ![Screenshot from 2021-11-27 23-32-03.png](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Screenshot_from_2021-11-27_23-32-03.png)
     
 5. Set up Hadoop `tmp` directory and replication factor in `hdfs-site.xml`
     
-    ![Untitled](pictures/Untitled%209.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%209.png)
     
 6. Set up the namenode in `core-site.xml`
     
-    ![Untitled](pictures/Untitled%2010.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2010.png)
     
 7. Set up YARN's node manager and resource manager in `yarn-site.xml`
     
-    ![Untitled](pictures/Untitled%2011.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2011.png)
     
 8. Set up the following settings for MapReduce
     
-    ![Untitled](pictures/Untitled%2012.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2012.png)
     
 9. Add the following workers
     
-    ![Untitled](pictures/Untitled%2013.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2013.png)
     
 10. Distribute the configurations to all the hosts
 11. Run HDFS by `start-dfs.sh` and check the working nodes by `hdfs dfsadmin -report`
     
-    ![Untitled](pictures/Untitled%2014.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2014.png)
     
-    ![Untitled](pictures/Untitled%2015.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2015.png)
     
 12. Start YARN by running `start-yarn.sh`
 13. Check that the node really work for YARN
     
-    ![Untitled](pictures/Untitled%2016.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2016.png)
     
 
 ## What Could Have Been Done Differently?
@@ -162,44 +162,44 @@ Whlie deploying on the private network cluster we could host Hadoop components o
 
 - Running the system without checking the user's preferences
     
-    ![Untitled](pictures/Untitled%2017.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2017.png)
     
 - Loading the user's preferences from the file
     
-    ![Untitled](pictures/Untitled%2018.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2018.png)
     
-    ![Untitled](pictures/Untitled%2019.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2019.png)
     
 - Loading the preferences by interrogating the user
     
-    ![Untitled](pictures/Untitled%2020.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2020.png)
     
-    ![Untitled](pictures/Untitled%2021.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2021.png)
     
 
 ### Running the System on Private Network Hadoop Cluster
 
 - Running the system without checking the user's preferences
     
-    ![Untitled](pictures/Untitled%2022.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2022.png)
     
-    ![Untitled](pictures/Untitled%2023.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2023.png)
     
 1. Run the recommender system with loading the grades from the file
     
-    ![Untitled](pictures/Untitled%2024.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2024.png)
     
-    ![Untitled](pictures/Untitled%2025.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2025.png)
     
-    ![Untitled](pictures/Untitled%2026.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2026.png)
     
 2. Run the recommender system with getting the grades from keyboard input
     
-    ![Untitled](pictures/Untitled%2027.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2027.png)
     
-    ![Untitled](pictures/Untitled%2028.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2028.png)
     
-    ![Untitled](pictures/Untitled%2029.png)
+    ![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2029.png)
     
 
 ## Analysis of the Results
@@ -208,31 +208,37 @@ Discovering how rank affects the error of the model. All ranks were tested on th
 
 - Rank = 10
 
-![Untitled](pictures/Untitled%2030.png)
+![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2030.png)
 
 - Rank = 20
 
-![Untitled](pictures/Untitled%2031.png)
+![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2031.png)
 
 - Rank = 30
 
-![Untitled](pictures/Untitled%2032.png)
+![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2032.png)
 
 - Rank = 40
 
-![Untitled](pictures/Untitled%2033.png)
+![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2033.png)
 
 - Rank = 50
 
-![Untitled](pictures/Untitled%2034.png)
+![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2034.png)
 
 - Rank = 60
 
-![Untitled](pictures/Untitled%2035.png)
+![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2035.png)
 
 - Rank = 100
 
-![Untitled](pictures/Untitled%2036.png)
+![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2036.png)
+
+The error after training and the baseline can be also visually represented on the plots:
+
+![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2037.png)
+
+![Untitled](IBD%20Assignment%20a5c10c75a5d94d1e82cdf310594441fc/Untitled%2038.png)
 
 So, in the results, we can see that baseline error in all cases is almost the same, while test errors (after training) are different. The minimum test error is on rank 40. That means all ranks < 40 - underfit and all ranks > 40 - overfit.
 
